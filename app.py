@@ -25,6 +25,11 @@ prompt = """
     Make sure your tone is positive, empowering, and girl-friendly. This app is for women and girls only, and your goal is to make them feel understood, guided, and supported in their fitness journey.
 
     """
+    
+@app.route('/', methods=['GET'])
+def home():
+    print("[INFO] / route was accessed — Fitness AI Backend is running.")
+    return jsonify({"message": "Fitness Ai Backend is running!"})
 
 @app.route('/ask-question', methods=['POST'])
 def ask_question():
